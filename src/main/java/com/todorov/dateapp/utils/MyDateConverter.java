@@ -1,6 +1,6 @@
-package com.todorov.utils;
+package com.todorov.dateapp.utils;
 
-import com.todorov.model.MyDate;
+import com.todorov.dateapp.model.MyDate;
 
 import javax.ws.rs.ext.ParamConverter;
 import java.util.Calendar;

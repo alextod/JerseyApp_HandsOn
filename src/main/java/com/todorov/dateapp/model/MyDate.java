@@ -1,4 +1,4 @@
-package com.todorov.model;
+package com.todorov.dateapp.model;
 
 /**
  * Created by Alex on 18.12.2016.

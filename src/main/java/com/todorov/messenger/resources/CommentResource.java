@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Alex on 05.10.2016.
  */
-@Path("/")
+@Path("/comments")
 public class CommentResource {
 
     CommentService commentService = new CommentService();

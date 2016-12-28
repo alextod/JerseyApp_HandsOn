@@ -1,4 +1,4 @@
-package com.todorov.utils;
+package com.todorov.dateapp.utils;
 
 import javax.ws.rs.Produces;
 import javax.ws.rs.WebApplicationException;
@@ -10,14 +10,15 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
  * Created by Alex on 18.12.2016.
  */
 @Provider
-@Produces("text/shortdate")
-public class DateMessageBodyWriter implements MessageBodyWriter<Date> {
+@Produces(value = {"text/shortdate", MediaType.TEXT_PLAIN})
+public class ShortDateMessageBodyWriter implements MessageBodyWriter<Date> {
 
     @Override
     public boolean isWriteable(Class<?> aClass, Type type, Annotation[] annotations, MediaType mediaType) {
@@ -34,7 +35,9 @@ public class DateMessageBodyWriter implements MessageBodyWriter<Date> {
                         Object> multivaluedMap,
                         OutputStream outputStream)
             throws IOException, WebApplicationException {
-        outputStream.write(date.toString().getBytes());
+        Calendar calendar = Calendar.getInstance();
+        String shortDate = calendar.get(Calendar.DATE) + "." + (calendar.get(Calendar.MONTH) + 1) + "." + calendar.get(Calendar.YEAR);
+        outputStream.write(shortDate.getBytes());
     }
 
     @Override

@@ -1,5 +1,6 @@
-package com.todorov;
+package com.todorov.dateapp;
 
+import javax.inject.Singleton;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 

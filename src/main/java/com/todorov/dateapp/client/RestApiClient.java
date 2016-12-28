@@ -1,4 +1,4 @@
-package com.todorov.client;
+package com.todorov.dateapp.client;
 
 import com.todorov.messenger.model.Message;
 

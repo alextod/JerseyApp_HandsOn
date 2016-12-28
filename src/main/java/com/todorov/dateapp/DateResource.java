@@ -1,6 +1,6 @@
-package com.todorov;
+package com.todorov.dateapp;
 
-import com.todorov.model.MyDate;
+import com.todorov.dateapp.model.MyDate;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
